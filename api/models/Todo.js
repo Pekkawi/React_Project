@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// mein KAMPF mit die Welt
+
 const TodoSchema = new Schema({
   text: {
     type: String,
