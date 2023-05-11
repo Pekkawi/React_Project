@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Schema = mognoose.Schema;
+const Schema = mongoose.Schema;
 
 const TodoSchema = new Schema({
   text: {
@@ -12,7 +12,7 @@ const TodoSchema = new Schema({
   },
   timestamp: {
     type: String,
-    default: new Date.now(),
+    default: Date.now(),
   },
 });
 
