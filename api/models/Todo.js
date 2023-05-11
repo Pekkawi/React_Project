@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-//da tovariski
+// mein KAMPF mit die Welt
 
 const TodoSchema = new Schema({
   text: {
