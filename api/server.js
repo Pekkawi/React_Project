@@ -20,6 +20,31 @@ app.get("/todos", async (req, res) => {
   res.json(todos);
 });
 
+app.post("/todo/new", (req, res) => {
+  const todo = new Todo({
+    text: req.body.text,
+  });
+  todo.save();
+
+  res.json(todo);
+});
+
+app.delete("/todo/delete/:id", async (req, res) => {
+  //:id can be literary anything
+  //it's called dynamic piece of data that we'll pass through the url
+
+  const result = await Todo.findByIdAndDelete(req.params.id); //this is a mongoose function
+
+  res.json(result);
+});
+
+app.put("/todo/complete/:id", async (req, res) => {
+  const todo = await Todo.findById(req.params.id);
+  todo.complete = !todo.complete;
+  todo.save();
+  res.json(todo);
+});
+
 app.listen(3001, () => {
   console.log("Server started on port 3001");
 });
