@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+//da tovariski
+
 const TodoSchema = new Schema({
   text: {
     type: String,
