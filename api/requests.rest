@@ -6,12 +6,12 @@ POST http://localhost:3001/todo/new
 Content-Type: application/json
 
 {
-  "text":"Mein Kampf"
+  "text":"Da"
 }
 
 ###
 
-DELETE http://localhost:3001/todo/delete/645d674ee9cc846fdb47c7f7
+DELETE http://localhost:3001/todo/delete/6460cbedf417ae95beaa6838
 
 ###
 
